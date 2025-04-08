@@ -20,7 +20,9 @@ public class Figura {
                     Quadrado quadrado = new Quadrado(); // cria um objeto quadrado
                     quadrado.setLado(lado); // set para atribuir o valor do lado ao objeto
                     quadrado.imprimir(); // chama a função imprimir
-                    quadrado.contaQ();
+                    Quadrado contaq = new Quadrado();//novo objeto conta
+                    contaq.setLado(lado);//atribui o valor lado ao objeto
+                    contaq.contaQ();//chama a função contaQ
                     break;
 
                 case 2:
@@ -33,7 +35,10 @@ public class Figura {
                     triangulo.setBase(base);// atribui o valor inserido pelo usuário
                     triangulo.setAltura(altura);// atribui o valor inserido pelo usuário
                     triangulo.imprimir();// chama a função imprimir
-                    triangulo.contaT();// chama a função conta
+                    Triangulo conta = new Triangulo();//novo objeto
+                    conta.setAltura(altura);// atribui valor inserido pelo usuário
+                    conta.setBase(base);// atribui valor inserido pelo usuário
+                    conta.contaT();// chama a função contaT
                     break;
 
                 case 3:
@@ -45,7 +50,7 @@ public class Figura {
                     // digitou outra opção
                     System.out.println("Opção inválida! Digite uma opção válida!");
             }
-        } while (menu != 3);// se o menu receber um valor diferente de três, acaba a repetição.
+        } while (menu != 3);// se o menu receber um valor diferente de três a repetição continua.
 
     }
 }
